@@ -1,0 +1,30 @@
+public class Main
+{
+    //function to print the majority element of an array
+    public static void  getmajority(int arr[]){
+        int n=arr.length;
+        int eachcount=0,index=-1;
+        for(int i=0;i<n;i++){
+            int count =0;
+            for(int j=0;j<n;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }  
+                }
+                if(count>eachcount){
+                    eachcount=count;
+                    index=i;
+                }
+                 }
+                 if(eachcount>n/2){
+                System.out.println("element is"+arr[index]+" and count is "+eachcount);}
+        else{
+            System.out.println("no majority element found");
+        }
+    }
+ 
+	public static void main(String[] args) {
+		int x[]={22,33,44,33,22,22,22};
+	   getmajority(x);
+	}
+}
